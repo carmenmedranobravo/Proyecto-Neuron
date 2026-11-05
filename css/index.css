@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root{
-
+ 
     /* Colors */
     --color-dark: #1F1F1F;
     --color-light: #F3F3F3;
@@ -25,5 +25,6 @@
     --font-p: 400  .9375rem "Instrument Sans", sans-serif;
     --font-link: 400 .9375rem "Instrument Sans", sans-serif; 
 
+    
 
 }
