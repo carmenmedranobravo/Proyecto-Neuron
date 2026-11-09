@@ -100,6 +100,14 @@ a.btn{
     transition: opacity .3s;
 }
 
+.menu-link{
+    opacity: 50%;
+     &:hover{
+        opacity: 100%;
+    }
+    transition: opacity 200ms;
+}
+
 .img-radius{
     border-radius: var(--radius-small);
 }
