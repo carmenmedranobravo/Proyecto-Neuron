@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
-:root{
- 
+:root {
+
     /* Colors */
     --color-dark: #1F1F1F;
     --color-light: #F3F3F3;
@@ -21,62 +21,74 @@
     --radius-small: 5px;
 
     /* Fonts */
-    --font-h1: 400 clamp( 3rem, 5vw, 4rem) "Hedvig Letters Sans", sans-serif;
-    --font-h2: 400 clamp( 1.5rem, 5vw, 2.125rem) "Hedvig Letters Sans", sans-serif;
-    --font-h3: 400 clamp( 1.1875rem, 5vw, 1.5rem) "Hedvig Letters Sans", sans-serif;
-    --font-h4: 400 clamp( 1.0625rem, 5vw, 1.1875rem) "Instrument Sans", sans-serif;
-    --font-p: 400  .9375rem "Instrument Sans", sans-serif;
-    --font-link: 400 .9375rem "Instrument Sans", sans-serif; 
+    --font-h1: 400 clamp(3rem, 5vw, 4rem) "Hedvig Letters Serif", serif;
+    --font-h2: 400 clamp(1.5rem, 5vw, 2.125rem) "Hedvig Letters Serif", serif;
+    --font-h3: 400 clamp(1.1875rem, 5vw, 1.5rem) "Hedvig Letters Serif", serif;
+    --font-h4: 400 clamp(1.0625rem, 5vw, 1.1875rem) "Instrument Sans", sans-serif;
+    --font-p: 400 .9375rem "Instrument Sans", sans-serif;
+    --font-link: 400 .9375rem "Instrument Sans", sans-serif;
 }
 
 /* Reset */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:"Instrument Sans", sans-serif;
+    font-family: "Instrument Sans", sans-serif;
 }
 
-img{
+img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     object-position: top;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
 
-ul, ol{
+ul,
+ol {
     list-style: none;
-} 
+}
 
 /* Components */
 
-h1, .heading-h1{
+h1,
+.heading-h1 {
     font: var(--font-h1);
 }
-h2, .heading-h2{
+
+h2,
+.heading-h2 {
     font: var(--font-h2);
 }
-h3, .heading-h3{
+
+h3,
+.heading-h3 {
     font: var(--font-h3);
 }
-h4, .heading-h4{
+
+h4,
+.heading-h4 {
     font: var(--font-h4);
 }
 
-p, span, li, .font-p{
+p,
+span,
+li,
+.font-p {
     font: var(--font-p);
 }
 
-a, .font-link{
+a,
+.font-link {
     font: var(--font-link);
 }
 
-a.btn{
+a.btn {
     padding: var(--size-xs) var(--size-md);
     display: inline-flex;
     gap: var(--size-xs);
@@ -84,40 +96,43 @@ a.btn{
     border-radius: 100px;
 
 
-    &.btn--dark{
+    &.btn--dark {
         background-color: var(--color-dark);
         color: var(--color-light);
     }
-    &.btn--light{
+
+    &.btn--light {
         background-color: var(--color-light);
         color: var(--color-dark);
     }
 
-    &:hover{
+    &:hover {
         opacity: 80%;
     }
 
     transition: opacity .3s;
 }
 
-.menu-link{
+.menu-link {
     opacity: 50%;
-     &:hover{
+
+    &:hover {
         opacity: 100%;
     }
+
     transition: opacity 200ms;
 }
 
-.img-radius{
+.img-radius {
     border-radius: var(--radius-small);
 }
 
-.block{
+.block {
     max-width: var(--size-block);
     margin: 0 auto;
 }
 
-.section{
+.section {
     padding: var(--size-lg) var(--size-sm);
     max-width: var(--size-canvas);
     margin: 0 auto;
@@ -134,11 +149,38 @@ a.btn{
 }
 
 .header__logo {
-    max-width: 5.75rem; 
+    max-width: 5.75rem;
 }
 
-.header__nav{
+.header__nav {
     display: flex;
     gap: var(--size-md);
 }
 
+/* Hero */
+.hero {
+    max-width: var(--size-canvas);
+    margin: 0 auto;
+    padding: 0 var(--size-xs);
+}
+
+.hero__background {
+    background-color: var(--color-dark);
+    padding: var(--size-md);
+    color: var(--color-light);
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(90deg, rgba(31, 31, 31, 0.2) 0%, rgba(31, 31, 31, 0.2) 100%), url(../media/Home-banner.webp);
+}
+
+.hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: var(--size-sm);
+    width: 100%;
+}
