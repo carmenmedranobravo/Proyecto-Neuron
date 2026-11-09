@@ -129,6 +129,8 @@ a.btn{
     justify-content: space-between;
     padding: var(--size-md);
     align-items: center;
+    max-width: var(--size-canvas);
+    margin: 0 auto;
 }
 
 .header__logo {
