@@ -155,6 +155,19 @@ a.btn {
 .header__nav {
     display: flex;
     gap: var(--size-md);
+
+    @media (max-width: 768px) {
+        display: none;
+
+    }
+}
+
+.open__menu {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: inline-block;
+    }
 }
 
 /* Hero */
@@ -175,6 +188,10 @@ a.btn {
     justify-content: center;
 
     background: linear-gradient(90deg, rgba(31, 31, 31, 0.2) 0%, rgba(31, 31, 31, 0.2) 100%), url(../media/Home-banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .hero__block {
@@ -183,4 +200,30 @@ a.btn {
     align-items: start;
     gap: var(--size-sm);
     width: 100%;
+}
+
+/* CTA */
+
+.cta__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--size-lg);
+}
+
+.cta__image{
+    max-width: 450px;
+}
+
+.cta__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-md);
+
+}
+.cta__content-heading{
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
 }
