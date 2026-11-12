@@ -6,12 +6,14 @@
     --color-dark: #1F1F1F;
     --color-light: #F3F3F3;
     --color-brand: #4391F0;
+    --color-error: #E26868;
 
     /* Sizes */
     --size-xxs: .5rem;
     --size-xs: .625rem;
     --size-sm: 1rem;
     --size-md: 2rem;
+    --size-ml: 3rem;    
     --size-lg: 4rem;
 
     --size-block: 60.25rem;
@@ -252,17 +254,18 @@ a.btn {
 /* Blog */
 
 .blog__block{
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
-    gap: var(--size-sm); 
-    padding:var(--size-sm); 
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);  
     align-items: start;
+
 }
 .blog__content{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap:var(--size-sm);
-    padding:var(--size-sm);
+    padding:var(--size-sm) 0;
+    align-self: stretch;
 }
 .blog__card{
     display: flex;
@@ -274,7 +277,57 @@ a.btn {
     flex: 1 1 150px;
     border-radius: var(--radius-small);
 }
-.blog__block .btn {
-    justify-self: start; 
-    width: fit-content;  
+
+/* Prices */
+
+.red {
+    color: var(--color-error);
+}
+
+.prices__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--size-sm);
+}
+
+.prices__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-ml);
+    padding: var(--size-md);
+    background-color: var(--color-light);
+    border-radius: var(--radius-small);
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-sm);
+    }
+
+    & li {
+        display: flex;
+        align-items: center;
+        gap: var(--size-sm);
+    }
+
+    & li i {
+        font-size: 1.1875rem;
+    }
+}
+
+.prices__card--dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.prices__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--size-md);
+
+    & .btn {
+        align-self: stretch;
+        justify-content: center;
+    }
 }
