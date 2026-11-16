@@ -90,7 +90,7 @@ a,
     font: var(--font-link);
 }
 
-a.btn {
+.btn {
     padding: var(--size-xs) var(--size-md);
     display: inline-flex;
     gap: var(--size-xs);
@@ -110,10 +110,39 @@ a.btn {
         color: var(--color-dark);
     }
 
+    &.btn--brand {
+        background-color: var(--color-brand);
+        color: var(--color-white);
+        border: none;
+    }
+
+
     &:hover {
         opacity: 80%;
     }
 }
+
+input,
+select {
+    padding: var(--size-sm);
+    border-radius: 100px;
+    background-color: var(--color-light);
+    border: 1px solid transparent;
+
+    &:hover {
+        opacity: 80%;
+    }
+
+    &:focus {
+        border: 1px solid var(--color-dark);
+        outline: none;
+    }
+}
+
+label:not([for="acceptance"]) {
+    display: none;
+}
+
 
 .menu-link {
     opacity: 50%;
@@ -144,6 +173,10 @@ a.btn {
     @media (max-width: 768px) {
         padding: var(--size-ml) var(--size-sm);
     }
+}
+
+.red {
+    color: var(--color-error);
 }
 
 /* Header */
@@ -290,7 +323,6 @@ a.btn {
     flex-direction: column;
     gap: var(--size-sm);
     align-items: start;
-
 }
 
 .blog__content {
@@ -314,10 +346,6 @@ a.btn {
 }
 
 /* Prices */
-
-.red {
-    color: var(--color-error);
-}
 
 .prices__block {
     display: grid;
@@ -367,5 +395,50 @@ a.btn {
     & .btn {
         align-self: stretch;
         justify-content: center;
+    }
+}
+
+/* Contact */
+.contact__block {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-sm);
+}
+
+/* .contact__map {} */
+
+.contact__content {
+    display: flex;
+   flex-direction: column;
+   gap: var(--size-sm);
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-sm);
+
+}
+
+.form__columns {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-md);
+
+    & .form__field {
+        flex: 1 1 320px;
+    }
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-xxs);
+
+    &.form__field--acceptance {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start;
     }
 }
