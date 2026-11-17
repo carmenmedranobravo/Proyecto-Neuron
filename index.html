@@ -217,8 +217,9 @@
                 <div class="contact__map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21489.149681598457!2d-0.3221409070804945!3d39.468696006290756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048e9d19b4381%3A0x62eb4407a5ebf894!2sCiudad%20de%20las%20Artes%20y%20las%20Ciencias!5e0!3m2!1ses!2ses!4v1794844241835!5m2!1ses!2ses"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
                 </div>
 
                 <div class="contact__content">
@@ -252,12 +253,63 @@
                             <label for="acceptance"> I have read an accept the privacy policy</label>
                             <input id="acceptance" name="acceptance" type="checkbox" required>
                         </div>
-                        <button class="btn btn--brand" type="submit">Send <i class="ri-arrow-right-up-line"></i></button>
+                        <button class="btn btn--brand" type="submit">Send <i
+                                class="ri-arrow-right-up-line"></i></button>
                     </form>
                 </div>
             </div>
         </section>
-    </main>
+
+        <!------------------- Posts ------------------->
+        <section class="posts section">
+            <div class="posts__block block">
+                <div class="posts__head">
+                    <h2>Latest post</h2>
+                    <a href="news.html" class="btn btn--dark">Go read all our posts <i
+                            class="ri-arrow-right-up-line"></i></a>
+                </div>
+                <ul class="posts__content">
+                    <li class="posts__card">
+                        <div class="posts__image">
+                            <picture>
+                                <source srcset="media/News-1.avif" type="image/avif">
+                                <source srcset="media/News-1.webp" type="image/webp">
+                                <img class="img-radius" src="media/PNews-1.jpg" alt="Abstract swirl in black and white">
+                            </picture>
+                        </div>
+                        <h3 class="heading-h4">The Ultimate Guide to Digital Transformation for Small Businesses</h3>
+                        <p>Embracing digital transformation is essential for small businesses seeking growth and
+                            resilience.</p>
+                        <a href="#" class="posts__link">Read more</a>
+                    </li>
+                    <li class="posts__card">
+                        <div class="posts__image">
+                            <picture>
+                                <source srcset="media/News-2.avif" type="image/avif">
+                                <source srcset="media/News-2.webp" type="image/webp">
+                                <img class="img-radius" src="media/News-2.jpg" alt="Abstract swirl in black and white">
+                            </picture>
+                        </div>
+                        <h3 class="heading-h4">Why Cloud Solutions Are the Backbone of Modern Enterprises</h3>
+                        <p>Cloud technologies offer flexibility, security, and scalability for all types of organizations. Learn how cloud solutions...</p>
+                        <a href="#" class="posts__link">Read more</a>
+                    </li>
+                    <li class="posts__card">
+                        <div class="posts__image">
+                            <picture>
+                                <source srcset="media/News-3.avif" type="image/avif">
+                                <source srcset="media/News-3.webp" type="image/webp">
+                                <img class="img-radius" src="media/News-3.jpg" alt="Abstract swirl in black and white">
+                            </picture>
+                        </div>
+                        <h3 class="heading-h4">Automate to Innovate: How Workflow Automation Boosts...</h3>
+                        <p>Implementing workflow automation helps eliminate repetitive tasks and human error. Explore key automation tools and...</p>
+                        <a href="#" class="posts__link">Read more</a>
+                    </li>
+                </ul>
+                <p class="heading-h4">We write for you, with love from neuron.</p>
+            </div>
+        </section>
 </body>
 
 </html>
