@@ -279,6 +279,14 @@ label:not([for="acceptance"]) {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    &.hero__background--contact {
+        min-height: 30vh;
+        background: linear-gradient(90deg, rgba(31, 31, 31, .2), rgba(31, 31, 31, .2)), url(../media/Contact-banner.webp);
+        background-color: var(--color-dark);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .hero__block {
@@ -297,6 +305,9 @@ label:not([for="acceptance"]) {
     }
 
     &.hero__block--about {
+        align-items: center;
+    }
+    &.hero__block--contact {
         align-items: center;
     }
 }
@@ -356,6 +367,8 @@ label:not([for="acceptance"]) {
 
 /* Features */
 
+/* Features */
+
 .feature__block {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -367,6 +380,33 @@ label:not([for="acceptance"]) {
     flex-direction: column;
     gap: var(--size-sm);
     padding: var(--size-sm);
+    
+    & h3 {
+        display: flex;
+        align-items: center;
+        gap: var(--size-sm);
+    }
+
+    & h3 i {
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    &.feature__card--box {
+        padding: var(--size-md) var(--size-sm);
+        background-color: var(--color-light);
+        border-radius: var(--radius-small);
+    }
+}
+
+.feature__link {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 250ms;
+
+    &:hover {
+        opacity: 80%;
+    }
 }
 
 /* Blog */
