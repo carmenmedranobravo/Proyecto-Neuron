@@ -7,7 +7,7 @@
     --color-light: #F3F3F3;
     --color-brand: #4391F0;
     --color-error: #E26868;
-    --color-legal:#909090;
+    --color-legal: #909090;
 
     /* Sizes */
     --size-xxs: .5rem;
@@ -252,6 +252,33 @@ label:not([for="acceptance"]) {
         min-height: 60vh;
         padding: var(--size-sm);
     }
+
+    &.hero__background--news {
+        min-height: 30vh;
+        background: linear-gradient(90deg, rgba(31, 31, 31, .2), rgba(31, 31, 31, .2)), url(../media/News-banner.webp);
+        background-color: var(--color-dark);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.hero__background--services {
+        min-height: 30vh;
+        background: linear-gradient(90deg, rgba(31, 31, 31, .2), rgba(31, 31, 31, .2)), url(../media/Services-banner.webp);
+        background-color: var(--color-dark);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &.hero__background--about {
+        min-height: 30vh;
+        background: linear-gradient(90deg, rgba(31, 31, 31, .2), rgba(31, 31, 31, .2)), url(../media/About-banner.webp);
+        background-color: var(--color-dark);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .hero__block {
@@ -260,6 +287,18 @@ label:not([for="acceptance"]) {
     align-items: start;
     gap: var(--size-sm);
     width: 100%;
+
+    &.hero__block--services {
+        align-items: center;
+    }
+
+    &.hero__block--news {
+        align-items: center;
+    }
+
+    &.hero__block--about {
+        align-items: center;
+    }
 }
 
 /* CTA */
@@ -532,7 +571,7 @@ label:not([for="acceptance"]) {
 .footer__block {
     display: flex;
     flex-direction: column;
-    gap:  var(--size-md);
+    gap: var(--size-md);
     padding: var(--size-md);
     background-color: var(--color-dark);
     border-radius: var(--radius-small);
@@ -574,7 +613,7 @@ label:not([for="acceptance"]) {
     display: flex;
     gap: var(--size-md);
     padding: var(--size-xs) 0;
-    color:var(--color-legal);
+    color: var(--color-legal);
     transition: opacity 250ms, color 250ms;
 
     & a:hover {
