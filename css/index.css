@@ -10,26 +10,26 @@
     --color-legal: #909090;
 
     /* Sizes */
-    --size-xxs: .5rem;
-    --size-xs: .625rem;
-    --size-sm: 1rem;
-    --size-md: 2rem;
-    --size-ml: 3rem;
-    --size-lg: 4rem;
+    --size-xxs: 8px;
+    --size-xs: 10px;
+    --size-sm: 16px;
+    --size-md: 32px;
+    --size-ml: 48px;
+    --size-lg: 64px;
 
-    --size-block: 60.25rem;
-    --size-canvas: 90rem;
+    --size-block: 964px;
+    --size-canvas: 1440px;
 
     /* Radius */
-    --radius-small: 5px;
+    --radius-small: .3125rem;
 
     /* Fonts */
-    --font-h1: 400 clamp(3rem, 5vw, 4rem) "Hedvig Letters Serif", serif;
-    --font-h2: 400 clamp(1.5rem, 5vw, 2.125rem) "Hedvig Letters Serif", serif;
-    --font-h3: 400 clamp(1.1875rem, 5vw, 1.5rem) "Hedvig Letters Serif", serif;
-    --font-h4: 400 clamp(1.0625rem, 5vw, 1.1875rem) "Instrument Sans", sans-serif;
-    --font-p: 400 .9375rem "Instrument Sans", sans-serif;
-    --font-link: 400 .9375rem "Instrument Sans", sans-serif;
+    --font-h1: 400 clamp(48px, 5vw, 64px) "Hedvig Letters Serif", serif;
+    --font-h2: 400 clamp(24px, 5vw, 34px) "Hedvig Letters Serif", serif;
+    --font-h3: 400 clamp(19px, 5vw, 24px) "Hedvig Letters Serif", serif;
+    --font-h4: 400 clamp(17px, 5vw, 19px) "Instrument Sans", sans-serif;
+    --font-p: 400 15px "Instrument Sans", sans-serif;
+    --font-link: 400 15px "Instrument Sans", sans-serif;
 }
 
 /* Reset */
@@ -101,7 +101,7 @@ a,
     gap: var(--size-xs);
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     white-space: nowrap;
     transition: opacity 250ms, border 250ms;
 
@@ -136,16 +136,16 @@ select {
 input,
 select {
     padding: var(--size-sm);
-    border-radius: 100px;
+    border-radius: 6.25rem;
     background-color: var(--color-light);
-    border: 1px solid transparent;
+    border: .0625rem solid transparent;
 
     &:hover {
         opacity: 80%;
     }
 
     &:focus {
-        border: 1px solid var(--color-dark);
+        border: .0625rem solid var(--color-dark);
         outline: none;
     }
 
@@ -188,7 +188,7 @@ label:not([for="acceptance"]) {
     max-width: var(--size-canvas);
     margin: 0 auto;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         padding: var(--size-ml) var(--size-sm);
     }
 }
@@ -209,14 +209,14 @@ label:not([for="acceptance"]) {
 }
 
 .header__logo {
-    max-width: 5.75rem;
+    max-width: 92px;
 }
 
 .header__nav {
     display: flex;
     gap: var(--size-md);
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         display: none;
 
     }
@@ -225,7 +225,7 @@ label:not([for="acceptance"]) {
 .open__menu {
     display: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         display: inline-block;
     }
 }
@@ -252,7 +252,7 @@ label:not([for="acceptance"]) {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         min-height: 60vh;
         padding: var(--size-sm);
     }
@@ -324,7 +324,7 @@ label:not([for="acceptance"]) {
     align-items: center;
     gap: var(--size-lg);
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         flex-direction: column;
         align-items: stretch;
         gap: var(--size-md);
@@ -342,7 +342,7 @@ label:not([for="acceptance"]) {
         display: block;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         flex: none;
         width: 100%;
         order: -1;
@@ -357,7 +357,7 @@ label:not([for="acceptance"]) {
     align-items: start;
     gap: var(--size-md);
 
-    @media (max-width: 768px) {
+    @media (max-width: 48rem) {
         flex: none;
         width: 100%;
     }
@@ -373,7 +373,7 @@ label:not([for="acceptance"]) {
 
 .feature__block {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
     gap: var(--size-sm);
 }
 
@@ -390,7 +390,7 @@ label:not([for="acceptance"]) {
     }
 
     & h3 i {
-        font-size: 1.5rem;
+        font-size: 24px;
         line-height: 1;
     }
 
@@ -403,7 +403,7 @@ label:not([for="acceptance"]) {
 
 .feature__link {
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: .1875rem;
     transition: opacity 250ms;
 
     &:hover {
@@ -422,7 +422,7 @@ label:not([for="acceptance"]) {
 
 .blog__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
     gap: var(--size-sm);
     padding: var(--size-sm) 0;
     align-self: stretch;
@@ -444,7 +444,7 @@ label:not([for="acceptance"]) {
 
 .prices__block {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
     gap: var(--size-sm);
 }
 
@@ -470,7 +470,7 @@ label:not([for="acceptance"]) {
     }
 
     & li i {
-        font-size: 1.1875rem;
+        font-size: 19px;
     }
 
     &.prices__card--dark {
@@ -503,10 +503,10 @@ label:not([for="acceptance"]) {
 }
 
 .contact__map {
-    flex: 1 1 320px;
+    flex: 1 1 20rem;
     border-radius: var(--radius-small);
     filter: grayscale(100%);
-    box-shadow: 0px 0px 100px rgba(31, 31, 31, 0.2);
+    box-shadow: 0rem 0rem 6.25rem rgba(31, 31, 31, 0.2);
 
 
     & iframe {
@@ -515,14 +515,14 @@ label:not([for="acceptance"]) {
     }
 
     &:hover {
-        box-shadow: 0px 0px 40px rgba(31, 31, 31, 0.2);
+        box-shadow: 0rem 0rem 2.5rem rgba(31, 31, 31, 0.2);
     }
 
     transition: box-shadow 250ms;
 }
 
 .contact__content {
-    flex: 1 1 320px;
+    flex: 1 1 20rem;
     display: flex;
     flex-direction: column;
     gap: var(--size-sm);
@@ -553,7 +553,7 @@ label:not([for="acceptance"]) {
     gap: var(--size-sm);
 
     & .form__field {
-        flex: 1 1 320px;
+        flex: 1 1 20rem;
     }
 }
 
@@ -587,7 +587,7 @@ label:not([for="acceptance"]) {
 
 .posts__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
     gap: var(--size-sm);
 }
 
@@ -627,7 +627,7 @@ label:not([for="acceptance"]) {
 }
 
 .footer__logo {
-    width: 90px;
+    width: 5.625rem;
     height: auto;
 }
 
@@ -637,7 +637,7 @@ label:not([for="acceptance"]) {
     gap: var(--size-md);
 
     & i {
-        font-size: 1.2rem;
+        font-size: 19.2px;
     }
 
     & a {
