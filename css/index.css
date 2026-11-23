@@ -3,7 +3,7 @@
 @keyframes appear {
     from{
         opacity: 0;
-        filter: blur(50%);
+        filter: blur(1rem);
         transform: translateY(2rem);
     }
     to{
